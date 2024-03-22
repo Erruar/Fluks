@@ -28,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Erruar/Fluks">
-    <img src="Fluks/Assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="Fluks/Assets/logo.ico" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Fluks</h3>
@@ -78,7 +78,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Erruar/Fluks/blob/master/Images/1.png)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Erruar/Fluks/blob/main/Images/1.png)
 
 This program is designed to optimize your Windows for maximum performance!
 
@@ -106,7 +106,7 @@ Use the `README.md` to get started.
   <summary>Main</summary>
   <ol>
     <h1 align="center">Main window</h1>
-    <img src="https://github.com/Erruar/Fluks/blob/master/Images/1.png"></img>
+    <img src="https://github.com/Erruar/Fluks/blob/main/Images/1.png"></img>
     <p> </p>
     <p align="left">The main window of my application will greet you at launch</p>
   </ol>
@@ -117,19 +117,19 @@ Use the `README.md` to get started.
   <summary>Menu</summary>
   <ol>
     <h1 align="center">Menu window</h1>
-    <img src="https://github.com/Erruar/Fluks/blob/master/Images/2.png"></img>
+    <img src="https://github.com/Erruar/Fluks/blob/main/Images/2.png"></img>
     <p> </p>
     <p align="left">There you can apply more tweaks to your system!</p>
     <h1 align="center">Suggests</h1>
-    <img src="https://github.com/Erruar/Fluks/blob/master/Images/3.png"></img>
+    <img src="https://github.com/Erruar/Fluks/blob/main/Images/3.png"></img>
     <p> </p>
     <p align="left">All buttons have suggest for you!</p>
     <h1 align="center">Revert page</h1>
-    <img src="https://github.com/Erruar/Fluks/blob/master/Images/4.png"></img>
+    <img src="https://github.com/Erruar/Fluks/blob/main/Images/4.png"></img>
     <p> </p>
     <p align="left">There you can roll-back your applied settings</p>
     <h1 align="center">About page</h1>
-    <img src="https://github.com/Erruar/Fluks/blob/master/Images/5.png"></img>
+    <img src="https://github.com/Erruar/Fluks/blob/main/Images/5.png"></img>
     <p> </p>
     <p align="left">Page with information about us</p>
     <p> </p>
