@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Fluks.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Fluks.View"
+             xmlns:viewModel="clr-namespace:Fluks.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="650" >
+    <Grid>
+        <TextBlock Text="About" Opacity="0.7" FontWeight="Bold" FontSize="20" Foreground="#111920" Margin="20,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Version" FontWeight="Light" FontSize="20" Foreground="#111920" Margin="20,40,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Standard edition - V1.0"  FontSize="16" Foreground="#111920" Margin="20,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Fluks: System refresh utility that you like!"  FontSize="16" Foreground="#111920" Margin="20,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Authors" FontWeight="Light" FontSize="20" Foreground="#111920" Margin="20,115,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="This app developer - Serzhik Sakurazhima ©"  FontSize="16" Foreground="#111920" Margin="20,143,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Main scripter - Jed Vaulten ©" FontSize="16" Foreground="#111920" Margin="20,163,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Support the authors" FontWeight="Light" FontSize="20" Foreground="#111920" Margin="20,185,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="We love money!" FontSize="16" Foreground="#111920" Margin="20,210,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,240,0,0" Source="/Assets/pp.jpg">
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>

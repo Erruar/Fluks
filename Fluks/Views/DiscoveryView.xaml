@@ -1,0 +1,198 @@
+﻿<UserControl x:Class="Fluks.View.DiscoveryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewmodel="clr-namespace:Fluks.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="650">
+    <UserControl.DataContext>
+        <viewmodel:MainViewModel></viewmodel:MainViewModel>
+    </UserControl.DataContext>
+    <Grid>
+        <TextBlock Text="Revert parameters" Opacity="0.7" FontWeight="Bold" FontSize="20" Foreground="#111920" Margin="20,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="Revert" FontWeight="Light" FontSize="20" Foreground="#111920" Margin="20,40,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Text="There you can revert applied tweaks"  FontSize="16" Foreground="#111920" Margin="20,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <Border  Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,105,0,0">
+            <Border.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Border.Triggers>
+            <Grid>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" Text="Revert CPU tweaks"/>
+                <Button Opacity="0" Click="RevertCPU_OnClick" ></Button>
+            </Grid>
+        </Border>
+        <Border  Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,150,0,0">
+            <Border.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Border.Triggers>
+            <Grid>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" Text="Revert GPU/MEM tweaks"/>
+                <Button Opacity="0" Click="RevertGPU_OnClick" ></Button>
+            </Grid>
+        </Border>
+        <Border  Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,195,0,0">
+            <Border.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Border.Triggers>
+            <Grid>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" Text="Revert NVMe tweaks"/>
+                <Button Opacity="0" Click="RevertNVMe_OnClick"></Button>
+            </Grid>
+        </Border>
+        <Border Visibility="Collapsed" Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,240,0,0">
+            <Border.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                <DoubleAnimation.EasingFunction>
+                                    <QuarticEase />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Border.Triggers>
+            <Grid>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" Text="Clear Display settings"/>
+                <Button Opacity="0" Click="ClearDisplay_OnClick"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>

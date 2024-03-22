@@ -1,0 +1,390 @@
+﻿<UserControl x:Class="Fluks.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewmodel1="clr-namespace:Fluks.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="650">
+    <UserControl.DataContext>
+        <viewmodel1:MainViewModel></viewmodel1:MainViewModel>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Extra settings" FontWeight="SemiBold" FontFamily="/Theme/Fonts/#cmusemibold" FontSize="20" Foreground="#111920" Opacity="0.7" Margin="20,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <Border MouseEnter="GTRR_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="0" Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,105,0,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Gtrrt" Text="Enable GTRR"/>
+                    <Button Opacity="0" Click="GTRR_Click"></Button>
+                </Grid>
+            </Border>
+        <Border MouseEnter="Throttle_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="0" Width="250" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,150,0,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="PowerT" Text="Disable Power Throttling"/>
+                    <Button Opacity="0" Click="PWRT_Click"></Button>
+                </Grid>
+            </Border>
+        <Border MouseEnter="MoreSpeed_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="0" Width="250" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,195,0,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Morespd" Text="More Speed"/>
+                    <Button Opacity="0"  Click="Moorespeed_OnClick"></Button>
+                </Grid>
+            </Border>
+        <Border Grid.Column="0" MouseLeave="UIElement_OnMouseLeave" Width="250" MouseEnter="NVMe_OnMouseEnter" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,240,0,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Nvmetweaks" Text="NVME Tweak"/>
+                    <Button Opacity="0" Click="NVMETweak_OnClick" ></Button>
+                </Grid>
+            </Border>
+        <Grid Grid.Column="0" x:Name="Amdcm" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Extra parameters"   FontFamily="/Theme/Fonts/#Open Sans Condensed" FontWeight="Light" FontSize="21" Foreground="#111920" Margin="20,40,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+            <TextBlock Text="Your favorite features, there will be more of them in the future!"  FontFamily="/Theme/Fonts/#CMU Sans Serif"  FontSize="17" Foreground="#111920" Margin="20,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        </Grid> 
+        <Border MouseEnter="Downfall_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="1" Opacity="0.87" Width="250" Height="30" CornerRadius="8" Background="#111920" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,105,20,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Downfall" Text="Disable Downfall"/>
+                    <Button Opacity="0"  Click="Downfall_OnClick"></Button>
+                </Grid> 
+        </Border>
+        <Border MouseEnter="Saver_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="1" Width="250" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,20,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Saver" Text="Disable Power Saver"/>
+                    <Button Opacity="0" Click="Saver_OnClick"></Button>
+                </Grid>
+            </Border>
+        <Border MouseEnter="Widget_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="1" Width="250" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,195,20,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="Widgets" Text="Enable Widgets"/>
+                    <Button Opacity="0" Click="Widget_OnClick" ></Button>
+                </Grid>
+            </Border>
+        <Border MouseEnter="GameBar_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="1" Width="250" Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,240,20,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="FsoBar" Text="Enable Game bar"/>
+                    <Button Opacity="0" Click="GameBar_OnClick"></Button>
+                </Grid>
+            </Border>
+        <TextBlock Grid.Column="0" Margin="20,295,-900,0" VerticalAlignment="Top" HorizontalAlignment="Left"  FontFamily="/Theme/Fonts/#CMU Sans Serif"  FontSize="17" Foreground="#111920" x:Name="Suggest"></TextBlock>
+    </Grid>
+</UserControl>

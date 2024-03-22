@@ -1,0 +1,44 @@
+﻿<Application x:Class="Fluks.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModel="clr-namespace:Fluks.ViewModel"
+             xmlns:view="clr-namespace:Fluks.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MenuButtonTheme2.xaml"/>
+                <ResourceDictionary Source="Theme/MenuButtonTheme3.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxName.xaml"/>
+                <ResourceDictionary Source="Theme/EditTextboxName.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxDesc.xaml"/>
+                <ResourceDictionary Source="Theme/EditTextboxDesc.xaml"/>
+                <ResourceDictionary Source="Theme/TabItemStyle.xaml"/>
+                <ResourceDictionary Source="Theme/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="Theme/Target2Style.xaml"/>
+                <ResourceDictionary Source="Theme/Target1Style.xaml"/>
+                <ResourceDictionary Source="Theme/Target3Style.xaml"/>
+                <ResourceDictionary Source="Theme/Target4Style.xaml"/>
+                <ResourceDictionary Source="Theme/Target5Style.xaml"/>
+                <ResourceDictionary Source="Theme/Target6Style.xaml"/>
+                <ResourceDictionary Source="Theme/Sett1Style.xaml"/>
+                <ResourceDictionary Source="Theme/Sett2Style.xaml"/>
+                <ResourceDictionary Source="Theme/Sett3Style.xaml"/>
+                <ResourceDictionary Source="Theme/Sett4Style.xaml"/>
+                <ResourceDictionary Source="Theme/OnButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/Tooltip.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
