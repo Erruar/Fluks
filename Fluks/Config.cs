@@ -10,5 +10,6 @@
         public bool downfall = false;
         public bool saver = false;
         public bool widgets = false;
+        public bool ulps = false;
     }
 }

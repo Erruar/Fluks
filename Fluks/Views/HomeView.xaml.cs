@@ -87,6 +87,12 @@ namespace Fluks.View
             if (Widgets.Text == "Enable Widgets") { _config.widgets = false; Widgets.Text = "Disable Widgets"; _apply.ApplyTweak("Scripts\\Widgets","regedit.exe"," ONWIDGET.reg "); } else { _config.widgets = true; Widgets.Text = "Enable Widgets"; _apply.ApplyTweak("Scripts\\Widgets","regedit.exe"," OFFWIDGET.reg "); }
             ConfigSave();
         }
+        private void UlpsSet_OnClick(object sender, RoutedEventArgs e)
+        {
+            ConfigLoad();
+            if (UlpsSett.Text == "Enable ULPS") { _config.ulps = false; UlpsSett.Text = "Disable ULPS"; _apply.ApplyTweak("Scripts\\ULPS","regedit.exe"," ULPSEn.reg "); } else { _config.ulps = true; UlpsSett.Text = "Enable ULPS"; _apply.ApplyTweak("Scripts\\ULPS","regedit.exe"," ULPSOff.reg "); }
+            ConfigSave();
+        }
 
         private void GameBar_OnClick(object sender, RoutedEventArgs e)
         {
@@ -146,6 +152,11 @@ namespace Fluks.View
         private void UIElement_OnMouseLeave(object sender, MouseEventArgs e)
         {
             Suggest.Text = "";
+        } 
+        
+        private void UlpsSet_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            Suggest.Text = "Let windows disable Ultra Low Power States\nand get GPU performance boost. (only for GPU 0001)";
         }
     }
 }

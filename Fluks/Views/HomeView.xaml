@@ -385,6 +385,53 @@
                     <Button Opacity="0" Click="GameBar_OnClick"></Button>
                 </Grid>
             </Border>
-        <TextBlock Grid.Column="0" Margin="20,295,-900,0" VerticalAlignment="Top" HorizontalAlignment="Left"  FontFamily="/Theme/Fonts/#CMU Sans Serif"  FontSize="17" Foreground="#111920" x:Name="Suggest"></TextBlock>
+        <Border MouseEnter="UlpsSet_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Grid.Column="0" Width="250"
+                Opacity="0.87" Height="30" CornerRadius="8" Background="#111920"
+                VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,285,-250,0">
+                <Border.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Border.RenderTransform>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.03" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.03" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.0" Duration="0:0:.4">
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.0" Duration="0:0:.4" >
+                                    <DoubleAnimation.EasingFunction>
+                                        <QuarticEase />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+
+                    </EventTrigger>
+                </Border.Triggers>
+                <Grid>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="#0dc78e" x:Name="UlpsSett" Text="Enable ULPS"/>
+                    <Button Opacity="0"  Click="UlpsSet_OnClick"></Button>
+                </Grid>
+        </Border>
+        <TextBlock Grid.Column="0" Margin="20,328,-900,0" VerticalAlignment="Top" HorizontalAlignment="Left"  FontFamily="/Theme/Fonts/#CMU Sans Serif"  FontSize="17" Foreground="#111920" x:Name="Suggest"></TextBlock>
     </Grid>
 </UserControl>
